@@ -1,0 +1,7 @@
+REACT + REACT DOM ==> Permet de faire du Web
+
+react independant de toute plateforme, le + importante c'est react dom car permet d'interagir avec le navigateur.
+
+
+React + REAT Native ==> Mobile
+Native permet de faire du cross-platforme donc gain de temps dans le dev car pas a faire du ios et android séparement 
