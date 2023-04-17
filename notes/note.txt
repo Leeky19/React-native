@@ -5,3 +5,117 @@ react independant de toute plateforme, le + importante c'est react dom car perme
 
 React + REAT Native ==> Mobile
 Native permet de faire du cross-platforme donc gain de temps dans le dev car pas a faire du ios et android séparement 
+
+react native est une libririe permettant de creer des app natives Android et IOS.
+
+tres difficile de coder du IOS sans Iphone de moins de 5ans.
+
+Chez IOS pour avoir la meilleure expérience de developpeur il faut posseder un ordinateur sous macOS et un terminal mobile sous IOS.
+
+Plus d'info sur :
+
+https://developer.apple.com/iOS
+
+le langage de programmation utilise est le Swift. (ou Objective-C).
+
+Bibliothèque tier ne permette pas de faire du dev sur des émulateurs.
+
+Pour s'améliorer en dev de Swift aller look des CS50 Tracks 2019 - iOS - Lesson 1 sur yt 
+
+
+Pour Andoid Studio :
+
+
+
+Pour benef de l'exp native il faut installer Android Studio et un SDK android. On cree alors notre app avec le langage Java(ou Kotlin).
+
+Plus d'info : https://developer.android.com/studio
+
+Langage le plus recommander c'est Kotlin
+le plus utilisé : Java
+
+but terminal  : mobile
+
+Pemet de travailler sur diférente platefome (mobile, voiture, TV...)
+
+ces outils permet d'utilise des librairy nativement. Mais pas sur toutes les surcouche.
+
+L'avantage est coder une fois pour deux systeme.
+
+
+react native et react sont  antité différente (pas HTML en native)
+
+Façon de coder proche du CSS 
+
+Text et View sont des composants coeur de native.
+
+React Native
+
+React Native est un framework cross-plateform qui permte de produire des app native iOS et Android, le tout avec la syntaxe de la bibliotheque React : 
+
+``javascript
+const App = props=> {
+return <View>
+<Text> Hello </Text>
+</View>
+}
+ne contient pas d'html
+
+
+Principe de dev : les Core components
+RN fournit un nombre de 'core component'npre integrer qui permet de couvrir un large eventail de possibilites de dev. Ils repondent aux besoins les plus courants de la plupart des app mobiles les plus simple.
+
+Diff entre scroll et view : permet de scroll sur l'écran en appuyant sur l'écran
+
+screenshot pour du 14 pouces en moyenne.
+
+StyleSheet : composant qui ressemble à du CSS mais qui a une syntaxe particuliaire.
+
+Posssiblité de mettre du tailswind.
+
+https://www.youtube.com/@devaslife
+
+le composant view
+
+C'est le como de base pr la construction d'interface utilisateur mobiles.
+C'est un conteneur qui embarque nativement des fct : 
+-Flex https://reactnative.dev/docs/flexbox
+-du style https://reactnative.dev/docs/style
+-des fct tactiles https://reactnative.dev/docs/handling-touches
+-des fct d'acccessibilité https://reactnative.dev/docs/accesibility 
+
+
+Exemple :
+``javascript
+import React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
+
+const LotsOfStyles = () => {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.red}>just red</Text>
+      <Text style={styles.bigBlue}>just bigBlue</Text>
+      <Text style={[styles.bigBlue, styles.red]}>bigBlue, then red</Text>
+      <Text style={[styles.red, styles.bigBlue]}>red, then bigBlue</Text>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    marginTop: 50,
+  },
+  bigBlue: {
+    color: 'blue',
+    fontWeight: 'bold',
+    fontSize: 30,
+  },
+  red: {
+    color: 'red',
+  },
+});
+
+export default LotsOfStyles;
+
+
+On va coder avec des proportion
