@@ -1,9 +1,18 @@
 import { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 
 export default function App() {
-  const [enteredTodo, setEnteredTodo]= useState('')
+  const [enteredTodo, setEnteredTodo] = useState('test')
+
+  const changeTextHandler = (pEnteredTodo) => {
+    setEnteredTodo(pEnteredTodo)
+  }
+
+  const changeTodoHandler = () => {
+    console.log(enteredTodo)
+  }
+
   return (
     <View style={styles.containerFlex}>
       <View style={styles.blueFlexItem}>
@@ -11,10 +20,13 @@ export default function App() {
       </View>
       <View style={styles.greenFlexItem}>
       <Text>{enteredTodo}</Text>
-      <TextInput
-        placeholder='Entrer un nouvelle valeur de state'
-      />
-      <Button title ='Creat todo' />
+      <TextInput 
+        placeholder='Entrer nouvelle valeur de state'
+        onChangeText={changeTextHandler}
+       />
+       <Button
+        onPress={changeTodoHandler}
+        title='Create todo' /> 
       </View>
       <View style={styles.yellowFlexItem} >
       <Text>Yellow</Text>
@@ -34,19 +46,18 @@ const styles = StyleSheet.create({
   },
   containerFlex: {
     flex: 1,
-    flexDirection: 'row',
-    backgroundColor: 'orange'
   },
   blueFlexItem : {
-    flex: 1,
+    flex: 2,
     backgroundColor: 'blue'
   },
   greenFlexItem : {
-    flex: 1,
-    backgroundColor: 'green'
+    flex: 5,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   yellowFlexItem : {
-    flex: 1,
+    flex: 2,
     backgroundColor: 'yellow'
   },
 });
